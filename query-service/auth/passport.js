@@ -38,11 +38,11 @@ passport.use(new LocalStrategy(function(username,password,done){
         })
 }));
 
-passport.use(new BearerStrategy(function(token,done)
+passport.use(new BearerStrategy(function(token_no,done)
 {
     AuthToken.findOne({
         where:{
-            token:token
+            token_no:token_no
         },
         include:[User]
     }).then((token)=>
