@@ -10,7 +10,7 @@ route.get('/', async (req,res)=>{
     else{
         
         const uri = `http://localhost:3500/data-api/club/?club_name=${req.query.club_name}`
-        const data = await request(uri);
+        const data = JSON.parse(await request(uri));
         res.status(200).json(data);
     }
 })
