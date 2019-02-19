@@ -42,35 +42,12 @@ route.get('/logout',(req,res)=>
     })
 })
 
-// route.get('/profile',eli(),(req,res)=>
-// {
-//     res.status(200).json(req.user);
-// });
-
 route.get('/error',(req,res)=>
 {
     res.status(400).json({
         result:"Authentication Error"
     });
 });
-
-// route.get('/token',eli(),(req,res)=>
-// {
-//     AuthToken.find({
-//         where:{
-//             userId:req.user.id
-//         }
-//     }).then((authToken)=>
-//     {
-//         if(!authToken)
-//             return res.status(404).json("Not Found");
-//         res.status(200).json(authToken.token_no);
-
-//     }).catch((err)=>
-//     {
-//        return res.status(500).json(err);
-//     })
-// })
 
 route.post('/token',passport.authenticate('local'),(req,res)=>
 {
