@@ -1,9 +1,9 @@
 const route = require('express').Router();
 const db = require('../../db');
 
-route.get('/', (req,res)=>{
+route.get('/:club_name', (req,res)=>{
 
-    db.query("select p.name from affiliations a inner join playerpersonaldata p on a.ID=p.ID where a.club like '%" + req.query.club_name + "%'",(err,data)=>{
+    db.query("select p.name from affiliations a inner join playerpersonaldata p on a.ID=p.ID where a.club like '%" + req.params.club_name + "%'",(err,data)=>{
         if(err){
             res.json({
                 result:'not found.'
