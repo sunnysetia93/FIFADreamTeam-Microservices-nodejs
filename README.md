@@ -69,3 +69,5 @@ strengthen_team(club_name): This is an analysis API which retrieves all the play
 o	Assume that the base rating for every position in the team should be 80 or more. For every position in the team whose base rating is <80, recommend players from other teams/clubs along with their wage and value. E.g positions: ST: Strikes, CF: Center Forward, CAM: Center Attacking midfielder. All of these are provided in the database.
 •	Implement an API that takes custom input like querying more than one player in JSON (get_player_info(player_name1, player_name2, ...)
 •	Test code for automated testing of the two services
+
+> **Sunny Setia**
